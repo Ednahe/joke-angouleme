@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+body {
+  background-image: url(./images/background.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  padding: 16px 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-header {
+  padding: 24px 0;
+  margin: 0 auto;
+  width: 1170px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-nav {  
+  background: rgba(237, 243, 246, 0.96) none repeat scroll 0 0;
+}
+.contain-nav {
+  width: 1170px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-.App-link {
-  color: #61dafb;
+nav {
+  display: flex;
+  flex-direction: row;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container-list > ul {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.container-navicon {
+  height: 40px;
+  width: 36px;
+  background: #5a6b72;
+}
+.navicon {
+  padding: 8px 4px;
+  height: 24px;
+  filter: invert(100%) sepia(2%) saturate(7500%) hue-rotate(345deg) brightness(111%) contrast(114%);
+}
+.li-nav {
+  list-style: none;
+}
+.li-nav > a {
+  display: flex;
+  flex-direction: row;
 }
