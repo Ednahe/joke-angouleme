@@ -1,3 +1,5 @@
+/* HEADER  */
+
 body {
   background-image: url(./images/background.jpg);
   background-position: center top;
@@ -6,7 +8,7 @@ body {
   background-attachment: fixed;
 }
 header {
-  padding: 16px 0;
+  padding: 16px 0 0 0;
 }
 .container-header {
   padding: 24px 0;
@@ -22,6 +24,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-height: 44px;
 }
 nav {
   display: flex;
@@ -31,6 +34,7 @@ nav {
   display: flex;
   flex-direction: row;
   text-align: left;
+  gap: 16px;
 }
 .container-navicon {
   height: 40px;
@@ -48,4 +52,107 @@ nav {
 .li-nav > a {
   display: flex;
   flex-direction: row;
+  gap: 4px;
+  text-decoration: none;
+  border-bottom: 2px solid #5a6b72;
+  color: #5a6b72;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+.li-nav > a:hover {
+  border-bottom: 2px solid #e83f5f;
+}
+.li-nav > a:hover,
+.li-nav > a > div > img:hover {
+  color: #e83f5f;
+  filter: invert(33%) sepia(77%) saturate(2563%) hue-rotate(327deg) brightness(96%) contrast(89%);
+}
+.contain-arrow-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-down {
+  height: 16px;
+  filter: invert(42%) sepia(23%) saturate(280%) hue-rotate(152deg) brightness(89%) contrast(89%);
+}
+
+/* FIN HEADER  */
+/* MAIN  */
+
+.container-form {
+  padding: 40px 0 40px 0;
+  background: #fff;
+  height: 80vh;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+h1 {
+  color: #e83f5f;
+}
+.contain-first-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.section-pub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+}
+.container-pub {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 0;
+}
+.container-pub > img {
+ width: 240px;
+ height: 240px;
+}
+.joke-pub {
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  border: 2px solid #e83f5f;
+  background: rgba(232, 63, 95, 0.2);
+}
+
+/* WELCOME  */
+
+.welcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+}
+.welcome p {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.welcome p.visible {
+  opacity: 1;
+}
+.start {
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  border: 2px solid #e83f5f;
+  background: rgba(232, 63, 95, 0.2);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.start.visible {
+  opacity: 1;
 }
