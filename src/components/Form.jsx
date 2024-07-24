@@ -22,12 +22,16 @@ const Form = () => {
         setMatricule(e.target.value);
     }
 
+    const submitSatisfaction = () => {
+        console.log('soumission des checkbox');
+    }
+
     return <section className="container-form">
         <form onSubmit={submit} className="form">
             <h1>Questionnaire de satisfaction à destination des collaborateurs</h1>
             {!submitted && <FirstInput textUser={inputChange}/>}
             {!satisfaction && submitted && <Welcome matricule={matricule} goSatisfaction={startSatisfaction} />}
-            {satisfaction && <Satisfaction />}
+            {satisfaction && <Satisfaction submitCheck={submitSatisfaction} />}
         </form>
         <Pub />
     </section>

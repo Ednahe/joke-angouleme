@@ -156,3 +156,23 @@ h1 {
 .start.visible {
   opacity: 1;
 }
+
+/* SATISFACTION  */
+
+.container-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+.contain-check {
+  display: flex;
+  flex-direction: column;
+}
+.btn-check {
+  margin-top: 20px;
+}
+#error {
+  color: red;
+  font-weight: bold;
+}
