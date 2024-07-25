@@ -30,7 +30,7 @@ const Welcome = ({ matricule, goSatisfaction }) => {
 
   return (
     <div className="container-welcome">
-      <h2>BIENVENUE COLLABORATEUR {matricule}</h2>
+      <h2>Bienvenue collaborateur {matricule}</h2>
       <div className="welcome">
         <p id="firstP" className={first ? "visible" : ""}>{render}</p>
         <p id="secondP" className={second ? "visible" : ""}>{render2}</p>

@@ -125,7 +125,7 @@ h1 {
   padding: 8px;
   cursor: pointer;
   border: 2px solid #e83f5f;
-  background: rgba(232, 63, 95, 0.2);
+  background: rgba(232, 63, 95, 0.1);
 }
 
 /* WELCOME  */
@@ -149,7 +149,7 @@ h1 {
   padding: 8px;
   cursor: pointer;
   border: 2px solid #e83f5f;
-  background: rgba(232, 63, 95, 0.2);
+  background: rgba(232, 63, 95, 0.1);
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }

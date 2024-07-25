@@ -5,11 +5,11 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <Header />
       <Form />
       <Footer />
-    </div>
+    </main>
   );
 }
 
