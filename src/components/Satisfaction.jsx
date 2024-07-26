@@ -19,7 +19,6 @@ const Satisfaction = ({submitCheck}) => {
           if (currentRow < 2) {
             setCurrentRow(currentRow + 1);
           } else {
-            console.log("Toutes les questions sont remplies :", selected);
             submitCheck();
           }
         } else {

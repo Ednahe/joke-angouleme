@@ -137,11 +137,11 @@ h1 {
   text-align: center;
   gap: 16px;
 }
-.welcome p {
+.welcome h4 {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-.welcome p.visible {
+.welcome h4.visible {
   opacity: 1;
 }
 .start {
@@ -175,4 +175,14 @@ h1 {
 #error {
   color: red;
   font-weight: bold;
+}
+
+/* QUESTION */
+
+.contain-question {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
 }

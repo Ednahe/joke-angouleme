@@ -32,8 +32,8 @@ const Welcome = ({ matricule, goSatisfaction }) => {
     <div className="container-welcome">
       <h2>Bienvenue collaborateur {matricule}</h2>
       <div className="welcome">
-        <p id="firstP" className={first ? "visible" : ""}>{render}</p>
-        <p id="secondP" className={second ? "visible" : ""}>{render2}</p>
+        <h4 id="firstP" className={first ? "visible" : ""}>{render}</h4>
+        <h4 id="secondP" className={second ? "visible" : ""}>{render2}</h4>
       </div>
       <div
         className={`start ${visible ? "visible" : ""}`}
