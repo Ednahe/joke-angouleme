@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Question = () => {
+const Question = ({questionSubmit}) => {
   const [separate, setSeparate] = useState(0);
   const [error, setError] = useState('');
   const [checkedOne, setCheckedOne] = useState({
@@ -37,6 +37,7 @@ const Question = () => {
         setError('Veuillez sélectionner au moins une case.');
       } else {
         setError('');
+        questionSubmit();
       }
   };
 
@@ -110,7 +111,7 @@ const Question = () => {
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeTwo('check4')}/>
               <label>
-                Une idée insensé car nous délocaliserions en Roumanie.
+                Une idée insensé car nous devrions délocaliser en Roumanie.
               </label>
             </div>
           </div>
