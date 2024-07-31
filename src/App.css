@@ -187,6 +187,14 @@ h1 {
 
 /* INVEST  */
 
+.container-invest {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contain-img {
+  margin: 20px 0;
+}
 .img-invest {
   width: 100%;
   height: auto;
@@ -194,4 +202,34 @@ h1 {
   max-height: 300px;
   object-fit: cover;
   border-radius: 16px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: coucou 2s forwards;
 }
+@keyframes coucou {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  } 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.contain-input-invest {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
+}
+.contain-select label {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.contain-select select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* FREE EXPRESSION  */
