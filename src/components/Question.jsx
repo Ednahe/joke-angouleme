@@ -18,7 +18,7 @@ const Question = ({questionSubmit}) => {
 
   const questions = [
     "D'une manière générale vous trouvez que les ouvriers de la dechetterie : (plusieurs choix possible)",
-    "D'une manière générale vous trouvez qu'augmenter les salaires ce serait : (plusieurs choix possible)",
+    "D'une manière générale vous trouvez qu'augmenter les salaires des ouvriers ce serait : (plusieurs choix possible)",
   ];
 
   const submitOne = (e) => {
@@ -73,11 +73,11 @@ const Question = ({questionSubmit}) => {
             </div>
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeOne('check3')}/>
-              <label>Sont trop souvent alcoolisés.</label>
+              <label>Sont trop fainéants.</label>
             </div>
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeOne('check4')}/>
-              <label>Ne travaillent pas assez.</label>
+              <label>Sont trop souvent alcoolisés.</label>
             </div>
           </div>
           <p id="error">{error}</p>
@@ -111,7 +111,7 @@ const Question = ({questionSubmit}) => {
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeTwo('check4')}/>
               <label>
-                Une idée insensé car nous devrions délocaliser en Roumanie.
+                Une idée insensée car nous devrions délocaliser en Roumanie.
               </label>
             </div>
           </div>

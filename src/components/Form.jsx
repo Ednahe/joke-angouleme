@@ -6,6 +6,7 @@ import Satisfaction from './Satisfaction';
 import Question from './Question';
 import Invest from './Invest';
 import FreeExpression from './FreeExpression';
+import End from './End';
 
 const Form = () => {
     const [submitted, setSubmitted] = useState(false);
@@ -13,6 +14,7 @@ const Form = () => {
     const [question, setQuestion] = useState(false);
     const [invest, setInvest] = useState(false);
     const [expression, setExpression] = useState(false);
+    const [end, setEnd] = useState(false);
     const [matricule, setMatricule] = useState('');
 
     const submit = (e) => {
@@ -43,15 +45,21 @@ const Form = () => {
         setExpression(true);
     }
 
+    const submitExpression = () => {
+        setExpression(false);
+        setEnd(true);
+    }
+
     return <section className="container-form">
         <form onSubmit={submit} className="form">
             <h1>Questionnaire de satisfaction à destination des collaborateurs</h1>
             {!submitted && <FirstInput textUser={inputChange}/>}
-            {!satisfaction && submitted && !question && !invest && !expression && <Welcome matricule={matricule} goSatisfaction={startSatisfaction} />}
+            {!satisfaction && submitted && !question && !invest && !expression && !end && <Welcome matricule={matricule} goSatisfaction={startSatisfaction} />}
             {satisfaction && !question && <Satisfaction submitCheck={submitSatisfaction} />}
             {question && <Question questionSubmit={submitQuestion}/>}
             {invest && <Invest investSubmit={submitInvest}/>}
-            {expression && <FreeExpression />}
+            {expression && <FreeExpression expressionSubmit={submitExpression}/>}
+            {end && <End />}
         </form>
         <Pub />
     </section>

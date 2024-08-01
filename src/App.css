@@ -204,7 +204,7 @@ h1 {
   border-radius: 16px;
   opacity: 0;
   transform: scale(0.8);
-  animation: coucou 2s forwards;
+  animation: coucou 3s forwards;
 }
 @keyframes coucou {
   0% {
@@ -226,10 +226,15 @@ h1 {
   font-size: 16px;
 }
 .contain-select select {
-  padding: 10px;
+  padding: 4px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
 }
 
 /* FREE EXPRESSION  */
+
+textarea {
+  width: 300px;
+  height: 250px;
+}
