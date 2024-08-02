@@ -20,7 +20,7 @@ const Invest = ({investSubmit}) => {
 
     const submit = (e) => {
         e.preventDefault();
-        investSubmit();
+        investSubmit(options1, options2, options3);
     }
 
     return <>

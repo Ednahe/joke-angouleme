@@ -19,7 +19,8 @@ const Satisfaction = ({submitCheck}) => {
           if (currentRow < 2) {
             setCurrentRow(currentRow + 1);
           } else {
-            submitCheck();
+            console.log('composant satisfaction +', selected);            
+            submitCheck(selected);
           }
         } else {
           setError("Veuillez sélectionner une case à cocher avant de continuer.");

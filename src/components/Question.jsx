@@ -17,7 +17,7 @@ const Question = ({questionSubmit}) => {
   });
 
   const questions = [
-    "D'une manière générale vous trouvez que les ouvriers de la dechetterie : (plusieurs choix possible)",
+    "D'une manière générale vous trouvez que les ouvriers de la dechetterie sont : (plusieurs choix possible)",
     "D'une manière générale vous trouvez qu'augmenter les salaires des ouvriers ce serait : (plusieurs choix possible)",
   ];
 
@@ -37,7 +37,7 @@ const Question = ({questionSubmit}) => {
         setError('Veuillez sélectionner au moins une case.');
       } else {
         setError('');
-        questionSubmit();
+        questionSubmit(checkedOne, checkedTwo);
       }
   };
 
@@ -65,19 +65,19 @@ const Question = ({questionSubmit}) => {
           <div className="contain-question">
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeOne('check1')} />
-              <label>Sont trop nombreux.</label>
+              <label>trop nombreux.</label>
             </div>
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeOne('check2')}/>
-              <label>Sont trop payés.</label>
+              <label>trop payés.</label>
             </div>
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeOne('check3')}/>
-              <label>Sont trop fainéants.</label>
+              <label>trop fainéants.</label>
             </div>
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeOne('check4')}/>
-              <label>Sont trop souvent alcoolisés.</label>
+              <label>trop souvent alcoolisés.</label>
             </div>
           </div>
           <p id="error">{error}</p>
@@ -93,7 +93,7 @@ const Question = ({questionSubmit}) => {
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeTwo('check1')}/>
               <label>
-                Une très mauvaise idée pour la compétitivité de l'entreprise.
+                Une idée insensée car nous devrions délocaliser en Roumanie.
               </label>
             </div>
             <div className="container-question">
@@ -105,13 +105,13 @@ const Question = ({questionSubmit}) => {
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeTwo('check3')}/>
               <label>
-                Une idée stupide car cela détruirait des millions d'emplois.
+                Une très mauvaise idée car cela détruirait des millions d'emplois.
               </label>
             </div>
             <div className="container-question">
               <input type="checkbox" onChange={() => checkChangeTwo('check4')}/>
               <label>
-                Une idée insensée car nous devrions délocaliser en Roumanie.
+                Une idée stupide car ils dépenseraient tout en alcool et en jeux à gratter.
               </label>
             </div>
           </div>
