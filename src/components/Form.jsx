@@ -23,14 +23,12 @@ const Form = () => {
     const submit = (e) => {
         e.preventDefault();
         setSubmitted(true);
-        console.log('formulaire soumis');
-        
+        console.log('matricule soumis');        
     }
 
     const startSatisfaction = () => {
         setSatisfaction(true);
-        console.log('satisfaction');
-        
+        console.log('satisfaction');        
     }
 
     const inputChange = (e) => {
@@ -41,16 +39,14 @@ const Form = () => {
         setSatisfaction(false);
         setQuestion(true);
         setResSatisfaction(response);
-        console.log('satisfation soumis +', response);
-        
+        console.log('satisfation soumis +', response);        
     }
 
     const submitQuestion = (response) => {
         setQuestion(false);
         setInvest(true);
         setResQuestion(response);
-        console.log('question soumis +', response);
-        
+        console.log('question soumis +', response);        
     }
 
     const submitInvest = (response) => {
@@ -58,14 +54,12 @@ const Form = () => {
         setExpression(true);
         setResInvest(response);
         console.log('invest soumis +', response);
-        
     }
 
     const submitExpression = () => {
         setExpression(false);
         setEnd(true);
-        console.log('exp soumis');
-        
+        console.log('exp soumis');        
     }
 
     return <section className="container-form">

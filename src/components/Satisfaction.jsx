@@ -18,8 +18,7 @@ const Satisfaction = ({submitCheck}) => {
         if (selected[currentRow] !== null) {
           if (currentRow < 2) {
             setCurrentRow(currentRow + 1);
-          } else {
-            console.log('composant satisfaction +', selected);            
+          } else {          
             submitCheck(selected);
           }
         } else {
