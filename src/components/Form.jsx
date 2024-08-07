@@ -42,21 +42,18 @@ const Form = () => {
     const submitQuestion = (checkedOne, labelsOne, checkedTwo, labelsTwo) => {
         setQuestion(false);
         setInvest(true);
-        setResQuestion({checkedOne, labelsOne, checkedTwo, labelsTwo});
-        console.log('question soumis +', {checkedOne, labelsOne, checkedTwo, labelsTwo});        
+        setResQuestion({checkedOne, labelsOne, checkedTwo, labelsTwo});      
     }
 
     const submitInvest = (response) => {
         setInvest(false);
         setExpression(true);
         setResInvest(response);
-        console.log('invest soumis +', response);
     }
 
     const submitExpression = () => {
         setExpression(false);
-        setEnd(true);
-        console.log('exp soumis');        
+        setEnd(true);       
     }
 
     return <section className="container-form">
