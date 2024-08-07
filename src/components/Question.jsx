@@ -16,6 +16,20 @@ const Question = ({questionSubmit}) => {
     check4: false
   });
 
+  const labelsOne = {
+    check1: 'trop nombreux',
+    check2: 'trop payés',
+    check3: 'trop fainéants',
+    check4: 'trop souvent alcoolisés'
+  };
+
+  const labelsTwo = {
+    check1: 'une idée insensée car nous devrions délocaliser en Roumanie',
+    check2: 'une idée abominable car cela appauvrirait tout le monde',
+    check3: 'une très mauvaise idée car cela détruirait des millions d\'emplois',
+    check4: 'une idée stupide car ils dépenseraient tout en alcool et en jeux à gratter'
+  };
+
   const questions = [
     "D'une manière générale vous trouvez que les ouvriers de la dechetterie sont : (plusieurs choix possible)",
     "D'une manière générale vous trouvez qu'augmenter les salaires des ouvriers ce serait : (plusieurs choix possible)",
@@ -37,7 +51,7 @@ const Question = ({questionSubmit}) => {
         setError('Veuillez sélectionner au moins une case.');
       } else {
         setError('');
-        questionSubmit(checkedOne, checkedTwo);
+        questionSubmit(checkedOne, labelsOne, checkedTwo, labelsTwo);
       }
   };
 
@@ -63,22 +77,12 @@ const Question = ({questionSubmit}) => {
         <>
           <h4>{questions[0]}</h4>
           <div className="contain-question">
-            <div className="container-question">
-              <input type="checkbox" onChange={() => checkChangeOne('check1')} />
-              <label>trop nombreux.</label>
-            </div>
-            <div className="container-question">
-              <input type="checkbox" onChange={() => checkChangeOne('check2')}/>
-              <label>trop payés.</label>
-            </div>
-            <div className="container-question">
-              <input type="checkbox" onChange={() => checkChangeOne('check3')}/>
-              <label>trop fainéants.</label>
-            </div>
-            <div className="container-question">
-              <input type="checkbox" onChange={() => checkChangeOne('check4')}/>
-              <label>trop souvent alcoolisés.</label>
-            </div>
+            {Object.keys(labelsOne).map(key => (
+              <div className="container-question" key={key}>
+                <input type="checkbox" onChange={() => checkChangeOne(key)} />
+                <label>{labelsOne[key]}</label>
+              </div>
+            ))}
           </div>
           <p id="error">{error}</p>
           <button type="button" onClick={submitOne}>
@@ -90,30 +94,12 @@ const Question = ({questionSubmit}) => {
         <>
           <h4>{questions[1]}</h4>
           <div className="contain-question">
-            <div className="container-question">
-              <input type="checkbox" onChange={() => checkChangeTwo('check1')}/>
-              <label>
-                Une idée insensée car nous devrions délocaliser en Roumanie.
-              </label>
-            </div>
-            <div className="container-question">
-              <input type="checkbox" onChange={() => checkChangeTwo('check2')}/>
-              <label>
-                Une idée abominable car cela appauvrirait tout le monde.
-              </label>
-            </div>
-            <div className="container-question">
-              <input type="checkbox" onChange={() => checkChangeTwo('check3')}/>
-              <label>
-                Une très mauvaise idée car cela détruirait des millions d'emplois.
-              </label>
-            </div>
-            <div className="container-question">
-              <input type="checkbox" onChange={() => checkChangeTwo('check4')}/>
-              <label>
-                Une idée stupide car ils dépenseraient tout en alcool et en jeux à gratter.
-              </label>
-            </div>
+            {Object.keys(labelsTwo).map(key => (
+              <div className="container-question" key={key}>
+                <input type="checkbox" onChange={() => checkChangeTwo(key)} />
+                <label>{labelsTwo[key]}</label>
+              </div>
+            ))}
           </div>
           <p id="error">{error}</p>
           <button type="button" onClick={submitTwo}>

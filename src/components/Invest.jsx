@@ -20,7 +20,7 @@ const Invest = ({investSubmit}) => {
 
     const submit = (e) => {
         e.preventDefault();
-        investSubmit(options1, options2, options3);
+        investSubmit([options1, options2, options3]);
     }
 
     return <>
@@ -34,17 +34,17 @@ const Invest = ({investSubmit}) => {
             <div className="contain-select">
                 <label>Diriez vous de nos investisseurs qu'ils sont : </label>
                 <select id="select1" value={options1} onChange={selectOption1}>
-                    <option value="1">Courageux</option>
-                    <option value="2">Bienveillant</option>
-                    <option value="3">Altruiste</option>
+                    <option value="courageux">Courageux</option>
+                    <option value="bienveillant">Bienveillant</option>
+                    <option value="altruiste">Altruiste</option>
                 </select>
             </div>
             <div className="contain-select">
                 <label>Diriez vous de leur rémunération doit augmenter de : </label>
                 <select id="select2" value={options2} onChange={selectOption2}>
-                    <option value="4">30%</option>
-                    <option value="5">40%</option>
-                    <option value="6">50%</option>
+                    <option value="30%">30%</option>
+                    <option value="40%">40%</option>
+                    <option value="50%">50%</option>
                 </select>
             </div>
             <div className="contain-select">

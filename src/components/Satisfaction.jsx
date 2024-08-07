@@ -47,9 +47,7 @@ const Satisfaction = ({submitCheck}) => {
                 if (currentRow === 2) {
                   if (index === 10) {
                     checkboxChange(index);
-                  } else {
-                    console.log('bonjour');
-                  }
+                  } 
                 } else {
                   checkboxChange(index);
                 }

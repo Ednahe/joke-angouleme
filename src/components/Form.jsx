@@ -17,18 +17,16 @@ const Form = () => {
     const [end, setEnd] = useState(false);
     const [matricule, setMatricule] = useState('');
     const [resSatisfaction, setResSatisfaction] = useState([]);
-    const [resQuestion, setResQuestion] = useState([]);
+    const [resQuestion, setResQuestion] = useState({});
     const [resInvest, setResInvest] = useState([]);
 
     const submit = (e) => {
         e.preventDefault();
-        setSubmitted(true);
-        console.log('matricule soumis');        
+        setSubmitted(true);     
     }
 
     const startSatisfaction = () => {
-        setSatisfaction(true);
-        console.log('satisfaction');        
+        setSatisfaction(true);       
     }
 
     const inputChange = (e) => {
@@ -38,15 +36,14 @@ const Form = () => {
     const submitSatisfaction = (response) => {
         setSatisfaction(false);
         setQuestion(true);
-        setResSatisfaction(response);
-        console.log('satisfation soumis +', response);        
+        setResSatisfaction(response);      
     }
 
-    const submitQuestion = (response) => {
+    const submitQuestion = (checkedOne, labelsOne, checkedTwo, labelsTwo) => {
         setQuestion(false);
         setInvest(true);
-        setResQuestion(response);
-        console.log('question soumis +', response);        
+        setResQuestion({checkedOne, labelsOne, checkedTwo, labelsTwo});
+        console.log('question soumis +', {checkedOne, labelsOne, checkedTwo, labelsTwo});        
     }
 
     const submitInvest = (response) => {
@@ -68,8 +65,8 @@ const Form = () => {
             {!submitted && <FirstInput textUser={inputChange}/>}
             {!satisfaction && submitted && !question && !invest && !expression && !end && <Welcome matricule={matricule} goSatisfaction={startSatisfaction} />}
             {satisfaction && !question && <Satisfaction submitCheck={(response) => submitSatisfaction(response)} />}
-            {question && <Question questionSubmit={(response) => submitQuestion(response)}/>}
-            {invest && <Invest investSubmit={(response) => submitInvest(response)}/>}
+            {question && <Question questionSubmit={submitQuestion}/>}
+            {invest && <Invest investSubmit={submitInvest}/>}
             {expression && <FreeExpression expressionSubmit={(response) => submitExpression(response)}/>}
             {end && <End matricule={matricule} resSatisfaction={resSatisfaction} resQuestion={resQuestion} resInvest={resInvest} />}
         </form>
