@@ -1,7 +1,9 @@
+import React, {useState, useEffect} from "react";
 import logoAngouleme from "./../images/logo-angouleme.jpg";
 import house from './../images/house.svg';
 import loupe from './../images/loupe.svg';
 import arrowDown from './../images/angle-down.svg';
+import burger from './../images/burger.svg';
 
 
 const Header = () => {
@@ -12,8 +14,11 @@ const Header = () => {
                 <img src={logoAngouleme} alt="logo de la ville d'angoulême" />
             </a>
         </div>
-        <div className="container-nav">
+        <div className='container-nav'>
             <div className="contain-nav">
+            <div className="burger-menu">
+                <img src={burger} alt="Menu burger" id="burger"/>
+            </div>
                 <div className="container-navicon">
                     <img src={house} className="navicon" alt="Icone de maison" />
                 </div>

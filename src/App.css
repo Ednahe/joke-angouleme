@@ -75,6 +75,10 @@ nav {
   height: 16px;
   filter: invert(42%) sepia(23%) saturate(280%) hue-rotate(152deg) brightness(89%) contrast(89%);
 }
+#burger {
+  width: 40px;
+  height: 40px;
+}
 
 /* FIN HEADER  */
 /* MAIN  */
@@ -273,9 +277,7 @@ textarea {
 
 footer {
   background: rgba(237, 243, 246, 0.90) none repeat scroll 0 0;
-  padding: 30px 20px;
-  display: flex;
-  justify-content: space-between;
+  padding: 40px 20px;
 }
 .container-footer {
   display: flex;
@@ -283,6 +285,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   max-width: 1170px;
+  margin: 0 auto;
 }
 #barre {
   width: 2px;

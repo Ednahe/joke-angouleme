@@ -30,6 +30,9 @@ const End = ({matricule, resSatisfaction = [], resQuestion = [], resInvest = []}
             <div className="render">Vous estimez que nos investisseurs sont {resInvest[0] || defaultOptions[0]}</div>
             <div className="render">Vous estimez que leur rémunération doit augmenter de {resInvest[1] || defaultOptions[1]}</div>
             <div className="render">vous estimez que nos investisseurs sont {resInvest[2] || defaultOptions[2]}</div>
+            <p>Merci pour votre participation collaborateur {matricule}.</p>
+            <p>Toutes les données récoltées seront revendu sur le dark net et nous vous déduirons 2h sur votre prochain salaire, temps estimé nécessaire à la réalisation de ce questionnaire</p>
+            <h3>Vous devriez retourner au travail !</h3>
         </section>
     </>
 }

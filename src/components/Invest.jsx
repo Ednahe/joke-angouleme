@@ -1,10 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import investisseur from '../images/investisseur.jpg'
+import ReactConfetti from 'react-confetti';
 
 const Invest = ({investSubmit}) => {
     const [options1, setOptions1] = useState('');
     const [options2, setOptions2] = useState('');
     const [options3, setOptions3] = useState('');
+    const [confetti, setConfetti] = useState(false);
+    const [numberConfetti, setNumberConfetti] = useState(200);
+    const [windowDimension, setWindowDimension] = useState({width: window.innerWidth, height: document.documentElement.scrollHeight});
+
+    const detectSize = () => {
+        setWindowDimension({width: window.innerWidth, height: document.documentElement.scrollHeight});
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', detectSize);
+        window.addEventListener('scroll', detectSize);
+        return () => {
+            window.removeEventListener('resize', detectSize);
+            window.removeEventListener('scroll', detectSize);
+        }
+    }, [windowDimension]);
+
+    const showConfetti = () => {
+        setConfetti(true);
+        setTimeout(() => {
+            setNumberConfetti(150);
+        }, 1000);
+        setTimeout(() => {
+            setNumberConfetti(100);
+        }, 2000);
+        setTimeout(() => {
+            setNumberConfetti(50);
+        }, 3000);
+        setTimeout(() => {
+            setNumberConfetti(0);
+        }, 4000);
+    }
 
     const selectOption1 = (e) => {
         setOptions1(e.target.value);
@@ -28,7 +61,8 @@ const Invest = ({investSubmit}) => {
         <h2>Portrait sur nos investisseurs</h2>
         <p>C'est grâce à leur courage et à leur audacieuse prise de risque que vous avez la chance d'avoir un emploi, petits privilégiés que vous êtes.</p>
         <div className="contain-img">
-            <img src={investisseur} alt="Portrait d'un investisseur courageux" className='img-invest' />
+            <img src={investisseur} alt="Portrait d'un investisseur courageux" className='img-invest' onAnimationEnd={showConfetti}/>
+            {confetti && < ReactConfetti width={windowDimension.width} height={windowDimension.height} tweenDuration={1000} numberOfPieces={numberConfetti}/>}
         </div>
         <div className="contain-input-invest">
             <div className="contain-select">
