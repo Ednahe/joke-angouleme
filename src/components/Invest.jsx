@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import investisseur from '../images/investisseur.jpg'
+import angel from '../images/ange.png';
 import ReactConfetti from 'react-confetti';
 
 const Invest = ({investSubmit}) => {
@@ -61,6 +62,10 @@ const Invest = ({investSubmit}) => {
         <h2>Portrait sur nos investisseurs</h2>
         <p>C'est grâce à leur courage et à leur audacieuse prise de risque que vous avez la chance d'avoir un emploi, petits privilégiés que vous êtes.</p>
         <div className="contain-img">
+            <div className="contain-angel">
+                <img src={angel} alt="petit ange" className="angel left-angel" />
+                <img src={angel} alt="petit ange" className="angel right-angel reverse-angel" />
+            </div>
             <img src={investisseur} alt="Portrait d'un investisseur courageux" className='img-invest' onAnimationEnd={showConfetti}/>
             {confetti && < ReactConfetti width={windowDimension.width} height={windowDimension.height} tweenDuration={1000} numberOfPieces={numberConfetti}/>}
         </div>
@@ -82,11 +87,11 @@ const Invest = ({investSubmit}) => {
                 </select>
             </div>
             <div className="contain-select">
-                <label>Diriez vous de nos investisseurs qu'ils sont : </label>
+                <label>Vous aimeriez remercier nos investisseurs car : </label>
                 <select id="select3" value={options3} onChange={selectOption3}>
-                    <option value="7">bleu</option>
-                    <option value="8">rouge</option>
-                    <option value="9">vert</option>
+                    <option value="grâce à eux vous avez un emploi et une dignité">Grâce à eux j'ai un emploi et une dignité</option>
+                    <option value="sinon vous seriez un cassos au rsa">Sinon je serais un cassos au rsa</option>
+                    <option value="autrement vous passeriez vos journées à vous alcooliser et à ne rien faire">Autrement je passerais mes journées à m'alcooliser et à ne rien faire</option>
                 </select>
             </div>
         </div>

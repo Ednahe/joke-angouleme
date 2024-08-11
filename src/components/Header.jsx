@@ -16,11 +16,11 @@ const Header = () => {
         </div>
         <div className='container-nav'>
             <div className="contain-nav">
-            <div className="burger-menu">
-                <img src={burger} alt="Menu burger" id="burger"/>
-            </div>
                 <div className="container-navicon">
                     <img src={house} className="navicon" alt="Icone de maison" />
+                </div>
+                <div className="burger-menu">
+                    <img src={burger} alt="Menu burger" id="burger"/>
                 </div>
                 <nav>
                     <div className="container-list">

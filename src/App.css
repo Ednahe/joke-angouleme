@@ -13,7 +13,7 @@ header {
 .container-header {
   padding: 24px 0;
   margin: 0 auto;
-  width: 1170px;
+  max-width: 1170px;
 }
 .container-nav {  
   background: rgba(237, 243, 246, 0.96) none repeat scroll 0 0;
@@ -75,9 +75,28 @@ nav {
   height: 16px;
   filter: invert(42%) sepia(23%) saturate(280%) hue-rotate(152deg) brightness(89%) contrast(89%);
 }
+.burger-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #burger {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+#burger:hover {
+  cursor: pointer;
+  filter: invert(40%) sepia(60%) saturate(3962%) hue-rotate(325deg) brightness(93%) contrast(95%);
+}
+
+@media (max-width: 1080px) {
+  #burger {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
 }
 
 /* FIN HEADER  */
@@ -93,6 +112,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 10px;
 }
 h1 {
   color: #e83f5f;
@@ -150,7 +170,7 @@ h1 {
   padding: 8px;
   cursor: pointer;
   border: 2px solid #e83f5f;
-  background: rgba(232, 63, 95, 0.1);
+  background: rgba(232, 63, 95, 0.05);
 }
 
 /* WELCOME  */
@@ -174,7 +194,7 @@ h1 {
   padding: 8px;
   cursor: pointer;
   border: 2px solid #e83f5f;
-  background: rgba(232, 63, 95, 0.1);
+  background: rgba(232, 63, 95, 0.05);
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -189,6 +209,7 @@ h1 {
   flex-direction: row;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .contain-check {
   display: flex;
@@ -200,6 +221,17 @@ h1 {
 #error {
   color: red;
   font-weight: bold;
+}
+@media (max-width: 500px) {
+  .container-checkbox {
+    gap: 10px; 
+  }
+
+  .contain-check {
+    flex-basis: 30%; 
+    flex-grow: 1; 
+    text-align: center; 
+  }
 }
 
 /* QUESTION */
@@ -218,6 +250,30 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+.contain-angel {
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 0;
+  animation: angels 0.5s forwards;
+  animation-delay: 3s;
+}
+@keyframes angels {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+.angel {
+  width: 60px;
+  height: 60px;
+}
+.reverse-angel {
+  transform: scaleX(-1);
 }
 .contain-img {
   margin: 20px 0;
@@ -240,6 +296,7 @@ h1 {
   } 100% {
     opacity: 1;
     transform: scale(1);
+    border: 3px solid goldenrod;
   }
 }
 .contain-input-invest {
@@ -299,4 +356,15 @@ footer {
 .contain-logo-pro {
   display: flex;
   gap: 12px;
+}
+@media (max-width: 600px) {
+  .container-footer {
+    flex-direction: column;
+    gap: 4px;
+  }
+  #barre {
+    width: 18px;
+    height: 2px;
+    margin-bottom: 8px;
+  }
 }

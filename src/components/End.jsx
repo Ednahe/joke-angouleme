@@ -14,7 +14,7 @@ const End = ({matricule, resSatisfaction = [], resQuestion = [], resInvest = []}
       const defaultOptions = {
         0: 'courageux',
         1: '30%',
-        2: 'pour l\'instant je sais pas',
+        2: 'grâce à eux j\'ai un emploi et une dignité',
       }
     
 
@@ -29,9 +29,9 @@ const End = ({matricule, resSatisfaction = [], resQuestion = [], resInvest = []}
             <div>Vous estimez qu'il ne faut pas augmenter les salaires des ouvriers parce que c'est {responseQuestion(resQuestion.checkedTwo, resQuestion.labelsTwo)}</div>
             <div className="render">Vous estimez que nos investisseurs sont {resInvest[0] || defaultOptions[0]}</div>
             <div className="render">Vous estimez que leur rémunération doit augmenter de {resInvest[1] || defaultOptions[1]}</div>
-            <div className="render">vous estimez que nos investisseurs sont {resInvest[2] || defaultOptions[2]}</div>
+            <div className="render">Vous êtes reconnaissant envers nos investisseurs car {resInvest[2] || defaultOptions[2]}</div>
             <p>Merci pour votre participation collaborateur {matricule}.</p>
-            <p>Toutes les données récoltées seront revendu sur le dark net et nous vous déduirons 2h sur votre prochain salaire, temps estimé nécessaire à la réalisation de ce questionnaire</p>
+            <p>Toutes les données récoltées seront revendu sur le dark net et nous vous déduirons 2h sur votre prochain salaire, temps nécessaire estimé pour la réalisation de ce questionnaire</p>
             <h3>Vous devriez retourner au travail !</h3>
         </section>
     </>
