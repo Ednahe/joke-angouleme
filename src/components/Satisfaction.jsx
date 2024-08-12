@@ -33,7 +33,7 @@ const Satisfaction = ({submitCheck}) => {
     ]
 
     return <>
-    <div>
+    <section className="satisfaction">
       <h4>{questions[currentRow]}</h4>
       <div className="container-checkbox">
         {Array.from({ length: 11 }).map((_, index) => (
@@ -59,7 +59,7 @@ const Satisfaction = ({submitCheck}) => {
       </div>
       <p id="error">{error}</p>
       <button className="btn-check" type="button" onClick={submit}>Valider</button>
-    </div>
+    </section>
   </>
 }
 
