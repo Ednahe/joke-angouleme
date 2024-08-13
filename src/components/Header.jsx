@@ -26,7 +26,7 @@ const Header = () => {
                     <div className="container-list">
                         <ul>
                             <li className="li-nav">
-                                <a href="#">Grand Angoulême
+                                <a href="#">GrandAngoulême
                                     <div className="contain-arrow-down">
                                         <img className="arrow-down" src={arrowDown} alt="icone pointant vers le bas" />
                                     </div>

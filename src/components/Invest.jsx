@@ -89,9 +89,9 @@ const Invest = ({investSubmit}) => {
             <div className="contain-select">
                 <label>Vous aimeriez remercier nos investisseurs car : </label>
                 <select id="select3" value={options3} onChange={selectOption3}>
-                    <option value="grâce à eux vous avez un emploi et une dignité">Grâce à eux j'ai un emploi et une dignité</option>
-                    <option value="sinon vous seriez un cassos au rsa">Sinon je serais un cassos au rsa</option>
-                    <option value="autrement vous passeriez vos journées à vous alcooliser et à ne rien faire">Autrement je passerais mes journées à m'alcooliser et à ne rien faire</option>
+                    <option value="grâce à eux vous avez un emploi et une dignité">Grâce à eux j'ai un emploi</option>
+                    <option value="sinon votre vie n'aurait pas de sens">Sinon ma vie n'aurait aucun sens</option>
+                    <option value="autrement vous passeriez vos journées à vous alcooliser et à ne rien faire">Autrement je serais alcoolique</option>
                 </select>
             </div>
         </div>
