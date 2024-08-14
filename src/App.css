@@ -11,9 +11,12 @@ body {
   background-attachment: fixed;
 }
 button {
-  padding: 4px;
+  padding: 8px;
+  border-radius: 8px;
 }
-
+button:hover {
+  cursor: pointer;
+}
 /* HEADER  */
 header {
   padding: 16px 0 0 0;
